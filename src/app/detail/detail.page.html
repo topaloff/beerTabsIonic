@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{ beer?.name }}</h1>
+  Price : {{ beer?.price }}<br>
+  Degree : {{ beer?.degree }}<br>
+  <img src="{{ beer?.image }}" *ngIf='beer?.image'>
+  <ion-button size="full" [routerLink]="['']" routerLinkActive="router-link-active" >Retour aux bieres</ion-button>
+</ion-content>

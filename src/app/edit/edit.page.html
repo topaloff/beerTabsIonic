@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="row">
+        <ion-col>
+            <ion-label for="name"> Name</ion-label><br>
+          <ion-input type="text" name="name" ngModel required [ngModel]="beer?.name"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label for="price"> Price</ion-label><br>
+          <ion-input type="number" name="price" ngModel required [ngModel]="beer?.price"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label for="degree"> Degree</ion-label><br>
+          <ion-input type="number" name="degree" ngModel required [ngModel]="beer?.degree"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-label for="image"> Image</ion-label><br>
+          <ion-input type="text" name="image" ngModel required [ngModel]="beer?.image"></ion-input>
+        </ion-col>
+      <ion-col>
+    <ion-label for="date"> Date</ion-label><br>
+        <ion-input type="date" name="date" ngModel required [ngModel]="beer?.date"></ion-input>
+      </ion-col>
+
+        <ion-col>
+            <ion-button type="submit" color="success" size="full">Editer</ion-button>
+        </ion-col>
+      </form>
+</ion-content>

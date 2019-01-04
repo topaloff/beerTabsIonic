@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let beer of liste">
+      <ion-grid>
+      <ion-row>
+          {{ beer.values.name }} <br>
+      </ion-row>
+      <ion-row>
+            <ion-button [routerLink]="['/tabs/detail',beer.key]" routerLinkActive="router-link-active" small>Detail</ion-button>
+            <ion-button [routerLink]="['/tabs/edit',beer.key]" routerLinkActive="router-link-active"  color="warning" small>Edit</ion-button>
+            <ion-button (click)="deleteBeer(beer.key)" color="danger" small>Delete</ion-button>
+      </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>
